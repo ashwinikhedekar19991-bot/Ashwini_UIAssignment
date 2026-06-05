@@ -1,15 +1,16 @@
+/**
+ * Calculates reward points based on transaction amount.
+ *
+ * Business Rules:
+ * - 2 points for every dollar spent above $100.
+ * - 1 point for every dollar spent between $50 and $100.
+ * - No points for amounts up to $50.
+ *
+ * @param {number} amount - Transaction amount.
+ * @returns {number} Total reward points earned for the transaction.
+ */
 import { REWARD_CONFIG } from "./constants";
 import { logError } from "./logger";
-
-/**
- * Calculate reward points for given amount
- * Business Rule:
- * - 2 points for every dollar above $100
- * - 1 point for every dollar between $50 and $100
- * 
- * @param {number} amount
- * @returns {number}
- */
 export const calculateRewardPoints = (amount) => {
   try {
     if(!amount || amount < 0) return 0;

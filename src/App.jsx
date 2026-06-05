@@ -1,3 +1,13 @@
+/**
+ * Main application component for the Reward Dashboard.
+ *
+ * Fetches and processes customer transaction data, provides
+ * customer search functionality with debouncing, and displays
+ * reward points grouped by customer and month.
+ *
+ * @component
+ * @returns {JSX.Element} The Reward Dashboard application UI.
+ */
 import React, { useMemo, useState } from "react";
 import { useTransactions } from "./hooks/useTransactions";
 import { useDebounce } from "./hooks/useDebounce";

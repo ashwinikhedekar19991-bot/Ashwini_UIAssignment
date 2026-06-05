@@ -1,6 +1,10 @@
 /**
- * MonthlyPoints Component
- * Displays per-month points
+ * Displays a table of points earned per month.
+ *
+ * @component
+ * @param {Object} props - Component props.
+ * @param {Object.<string, number>} props.monthly - Object containing month names as keys and points as values.
+ * @returns {JSX.Element} A table showing monthly points.
  */
 const MonthlyPoints = ({ monthly }) => {
   return (
