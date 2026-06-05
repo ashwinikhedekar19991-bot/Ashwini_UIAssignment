@@ -5,12 +5,12 @@ describe("logError utility", () => {
   let consoleErrorSpy;
 
   beforeEach(() => {
-    // ✅ Mock console.error
+    // Mock console.error
     consoleErrorSpy = jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
   afterEach(() => {
-    // ✅ Restore original implementation
+    //  Restore original implementation
     consoleErrorSpy.mockRestore();
   });
 

@@ -4,7 +4,7 @@ import App from "../App";
 import * as useTransactionsHook from "../hooks/useTransactions";
 import * as useDebounceHook from "../hooks/useDebounce";
 
-// ✅ Mock child components to isolate App logic
+//  Mock child components to isolate App logic
 jest.mock("../components/CustomerCard", () => ({ name, total, children }) => (
   <div data-testid="customer-card">
     <span>{name}</span>
@@ -72,7 +72,7 @@ describe("App Component", () => {
       error: "",
     });
 
-    // ✅ Debounce returns same value
+    //  Debounce returns same value
     jest.spyOn(useDebounceHook, "useDebounce").mockImplementation((val) => val);
 
     render(<App />);
@@ -111,7 +111,7 @@ describe("App Component", () => {
 
     const input = screen.getByPlaceholderText("Search customer");
 
-    // ✅ Filter for Jane
+    //  Filter for Jane
     fireEvent.change(input, { target: { value: "Jane" } });
 
     expect(screen.queryByText("John")).not.toBeInTheDocument();
@@ -139,7 +139,7 @@ describe("App Component", () => {
 
     const input = screen.getByPlaceholderText("Search customer");
 
-    // ✅ lowercase search
+    //  lowercase search
     fireEvent.change(input, { target: { value: "john" } });
 
     expect(screen.getByText("John")).toBeInTheDocument();

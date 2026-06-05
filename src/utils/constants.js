@@ -3,6 +3,6 @@
  * Configuration values for reward calculation
  */
 export const REWARD_CONFIG = {
-  MIN: 50,
-  MID: 100
+  MIN_AMOUNT_FOR_REWARD: 50,
+  BONUS_THRESHOLD_AMOUNT: 100
 };

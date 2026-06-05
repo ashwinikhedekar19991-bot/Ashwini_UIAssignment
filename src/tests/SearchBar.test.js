@@ -25,7 +25,7 @@ describe("SearchBar Component", () => {
 
     const input = screen.getByPlaceholderText("Search customer");
 
-    // ✅ Faster than userEvent
+    //  Faster than userEvent
     fireEvent.change(input, { target: { value: "Jane" } });
 
     expect(mockOnChange).toHaveBeenCalled();
@@ -46,7 +46,7 @@ describe("SearchBar Component", () => {
 
     const input = screen.getByPlaceholderText("Search customer");
 
-    // ✅ Faster
+    // Faster
     fireEvent.change(input, { target: { value: "Jane" } });
 
     expect(input).toHaveValue("Jane");

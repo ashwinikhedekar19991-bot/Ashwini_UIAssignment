@@ -34,14 +34,14 @@ describe("useTransactions Hook", () => {
 
     const { result } = renderHook(() => useTransactions());
 
-    // ✅ Initially loading true
+    // Initially loading true
     expect(result.current.loading).toBe(true);
 
     await waitFor(() => {
       expect(result.current.loading).toBe(false);
     });
 
-    // ✅ Data processed
+    //  Data processed
     expect(api.fetchTransactions).toHaveBeenCalled();
     expect(utils.processTransactions).toHaveBeenCalledWith(mockTransactions);
 
@@ -61,10 +61,10 @@ describe("useTransactions Hook", () => {
       expect(result.current.loading).toBe(false);
     });
 
-    // ✅ Error handling
+    //  Error handling
     expect(result.current.error).toBe("Failed to load data");
 
-    // ✅ Logger called
+    //  Logger called
     expect(logSpy).toHaveBeenCalledWith("API error", mockError);
   });
 
@@ -102,7 +102,7 @@ describe("useTransactions Hook", () => {
       expect(result.current.loading).toBe(false);
     });
 
-    // ✅ Ensures useMemo executed
+    //  Ensures useMemo executed
     expect(processSpy).toHaveBeenCalledWith(mockTransactions);
     expect(result.current.processedData).toEqual(processedMock);
   });

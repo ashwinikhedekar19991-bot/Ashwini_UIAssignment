@@ -1,95 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Reward Dashboard
 
-## Available Scripts
+A React application that calculates and displays customer reward points based on transaction history.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Display customer reward points
+* Monthly reward point breakdown
+* Search customers by name
+* Debounced search for better performance
+* Responsive UI
+* Reward calculation utility functions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React
+* JavaScript (ES6+)
+* CSS
+* Custom Hooks
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src/
+├── components/
+│ ├── CustomerCard
+│ ├── MonthlyPoints
+│ └── SearchBar
+├── hooks/
+│ ├── useTransactions
+│ └── useDebounce
+├── utils/
+│ ├── rewardCalculator
+│ ├── logger
+│ └── constants
+├── App.js
+└── index.js
 
-### `npm run build`
+## Utils
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contains business logic:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Reward calculation
+* Logger
+* Constants
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Reward Points Rules
 
-### `npm run eject`
+* 2 points for every dollar spent over $100
+* 1 point for every dollar spent between $50 and $100
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Transaction Amount: $120
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Points:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* 50 points for amount between $50 and $100
+* 40 points for amount above $100
 
-## Learn More
+Total: 90 points
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## .gitignore
-
-2
-
-This project uses a .gitignore file to exclude unnecessary files from version control.
-
-Ignored files and folders include:
-
-
-
-node_modules/Dependencies folder (auto-generated using npm/yarn)
-
- dist/Build output
-
-env Environment variables
-
-
-
-Make sure to run the following command after cloning:
-
-
-bash
-
+```bash
 npm install
+```
+
+## Run Application
+
+```bash
+npm start
+```
+
+## Run Tests
+
+```bash
+npm test
+```
+
+## Future Improvements
+
+* Pagination
+* Sorting
+* Export to CSV
+* Unit test coverage
+* Dark mode support
+
+## Features
+- Calculates customer rewards
+- API using json-server
+- Table UI
+- Search with debounce
+- Unit tested
+
+## Installation
+npm install
+
+## Run App
+npm start
+
+## Run API
+npm run server
+
+## Run Tests
+npm test
+
+## coverage
+npm test -- --coverage

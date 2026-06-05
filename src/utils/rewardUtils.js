@@ -12,20 +12,23 @@ import { logError } from "./logger";
  */
 export const calculateRewardPoints = (amount) => {
   try {
+    if(!amount || amount < 0) return 0;
+    const rountedAmount = Math.floor(amount);//handle decimals
     let points = 0;
 
     // Using switch to avoid nested ternary
     switch (true) {
-      case amount > REWARD_CONFIG.MID:
+      case rountedAmount > REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT:
         // Points above 100
-        points += (amount - REWARD_CONFIG.MID) * 2;
+        points += (rountedAmount - REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT
+) * 2;
 
         // Points between 50-100
-        points += (REWARD_CONFIG.MID - REWARD_CONFIG.MIN);
+        points += (REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT - REWARD_CONFIG.MIN_AMOUNT_FOR_REWARD);
         break;
 
-      case amount > REWARD_CONFIG.MIN:
-        points += (amount - REWARD_CONFIG.MIN);
+      case rountedAmount > REWARD_CONFIG.MIN_AMOUNT_FOR_REWARD:
+        points += (rountedAmount - REWARD_CONFIG.MIN_AMOUNT_FOR_REWARD);
         break;
 
       default:
@@ -34,7 +37,7 @@ export const calculateRewardPoints = (amount) => {
 
     return points;
   } catch (error) {
-    logError("Failed in calculateRewardPoints", error);
+    logError("Reward calculation error", error);
     return 0;
   }
 };

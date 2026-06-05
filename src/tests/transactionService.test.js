@@ -1,6 +1,6 @@
 import { fetchTransactions } from "../api/transactionService";
 
-// ✅ Mock global fetch
+//  Mock global fetch
 global.fetch = jest.fn();
 
 describe("fetchTransactions API", () => {
@@ -10,7 +10,7 @@ describe("fetchTransactions API", () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    // ✅ Mock console.error globally
+    //  Mock console.error globally
     consoleSpy = jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
@@ -45,7 +45,7 @@ describe("fetchTransactions API", () => {
       "Failed to fetch transactions"
     );
 
-    // ✅ Optional: verify logging
+    //  Optional: verify logging
     expect(consoleSpy).toHaveBeenCalledWith(
       "API Error:",
       expect.any(Error)

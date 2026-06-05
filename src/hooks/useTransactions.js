@@ -8,11 +8,12 @@ import { logError } from "../utils/logger";
  */
 export const useTransactions = () => {
   const [transactions, setTransactions] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
     const loadData = async () => {
+      setLoading(true)
       try {
         const result = await fetchTransactions();
         setTransactions(result);

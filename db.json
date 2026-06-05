@@ -1,15 +1,23 @@
 {
   "transactions": [
-    { "id": 1, "customerId": 1, "name": "John", "amount": 120, "date": "2026-01-15" },
-    { "id": 2, "customerId": 1, "name": "John", "amount": 75, "date": "2026-02-10" },
-    { "id": 3, "customerId": 1, "name": "John", "amount": 200, "date": "2026-03-05" },
+    { "id": 1, "customerId": 1, "name": "John", "amount": 120.75, "date": "2026-01-15" },
+    { "id": 2, "customerId": 1, "name": "John", "amount": 75.50, "date": "2026-01-20" },
+    { "id": 3, "customerId": 1, "name": "John", "amount": 40.10, "date": "2026-02-10" },
 
-    { "id": 4, "customerId": 2, "name": "Jane", "amount": 50, "date": "2026-01-20" },
-    { "id": 5, "customerId": 2, "name": "Jane", "amount": 150, "date": "2026-02-12" },
-    { "id": 6, "customerId": 2, "name": "Jane", "amount": 90, "date": "2026-03-22" },
+    { "id": 4, "customerId": 1, "name": "John", "amount": 200.00, "date": "2026-02-15" },
+    { "id": 5, "customerId": 1, "name": "John", "amount": 90.00, "date": "2026-03-01" },
 
-    { "id": 7, "customerId": 3, "name": "Bob", "amount": 200, "date": "2026-01-25" },
-    { "id": 8, "customerId": 3, "name": "Bob", "amount": 40, "date": "2026-02-14" },
-    { "id": 9, "customerId": 3, "name": "Bob", "amount": 130, "date": "2026-03-30" }
+    { "id": 6, "customerId": 2, "name": "Jane", "amount": 50.25, "date": "2026-01-10" },
+    { "id": 7, "customerId": 2, "name": "Jane", "amount": 150.80, "date": "2026-02-12" },
+    { "id": 8, "customerId": 2, "name": "Jane", "amount": 95.30, "date": "2026-03-22" },
+
+    { "id": 9, "customerId": 3, "name": "Bob", "amount": 220.60, "date": "2026-01-25" },
+    { "id": 10, "customerId": 3, "name": "Bob", "amount": 40.00, "date": "2026-02-14" },
+    { "id": 11, "customerId": 3, "name": "Bob", "amount": 130.00, "date": "2026-03-30" },
+
+    { "id": 12, "customerId": 4, "name": "Alice", "amount": 60.00, "date": "2025-01-10" },
+    { "id": 13, "customerId": 4, "name": "Alice", "amount": 110.00, "date": "2025-02-12" },
+    { "id": 14, "customerId": 4, "name": "Alice", "amount": 45.00, "date": "2025-03-05" }
   ]
 }
+

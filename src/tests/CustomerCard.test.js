@@ -8,6 +8,7 @@ test("renders customer card", () => {
     </CustomerCard>
   );
 
-  expect(screen.getByText("John")).toBeInTheDocument();
-  expect(screen.getByText("Total Points: 90")).toBeInTheDocument();
+ expect(screen.getByText("John")).toBeInTheDocument();
+expect(screen.getByText("Total Points:")).toBeInTheDocument();
+expect(screen.getByText("90")).toBeInTheDocument();
 });

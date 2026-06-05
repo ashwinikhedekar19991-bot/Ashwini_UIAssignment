@@ -4,13 +4,22 @@
  */
 const MonthlyPoints = ({ monthly }) => {
   return (
-    <>
-      <ul>
+<table border="1" cellSpacing="8">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+      <tbody>
         {Object.entries(monthly).map(([month, points]) => (
-          <li key={month}>{month}: {points}</li>
+          <tr key={month}>
+            <td>{month}</td>
+            <td>{points}</td> 
+            </tr>
         ))}
-      </ul>
-    </>
+      </tbody>
+      </table>
   );
 };
 
