@@ -19,22 +19,6 @@ A React application that calculates and displays customer reward points based on
 * CSS
 * Custom Hooks
 
-## Project Structure
-
-src/
-├── components/
-│ ├── CustomerCard
-│ ├── MonthlyPoints
-│ └── SearchBar
-├── hooks/
-│ ├── useTransactions
-│ └── useDebounce
-├── utils/
-│ ├── rewardCalculator
-│ ├── logger
-│ └── constants
-├── App.js
-└── index.js
 
 ## Utils
 
@@ -59,32 +43,6 @@ Points:
 * 40 points for amount above $100
 
 Total: 90 points
-
-## Installation
-
-```bash
-npm install
-```
-
-## Run Application
-
-```bash
-npm start
-```
-
-## Run Tests
-
-```bash
-npm test
-```
-
-## Future Improvements
-
-* Pagination
-* Sorting
-* Export to CSV
-* Unit test coverage
-* Dark mode support
 
 ## Features
 - Calculates customer rewards
