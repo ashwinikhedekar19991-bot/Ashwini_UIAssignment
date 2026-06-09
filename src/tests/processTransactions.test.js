@@ -19,17 +19,16 @@ describe("processTransactions", () => {
   test("should calculate correct monthly points", () => {
     const result = processTransactions(mockData);
 
-    // Jan: 120 → 90 points
-    expect(result[1].monthly["Jan"]).toBe(90);
+    // Jan 2026: 120 → 90 points
+    expect(result[1].monthly["Jan-2026"]).toBe(90);
 
-    // Feb: 75 → 25 points
-    expect(result[1].monthly["Feb"]).toBe(25);
+    // Feb 2026: 75 → 25 points
+    expect(result[1].monthly["Feb-2026"]).toBe(25);
   });
 
   test("should calculate total points correctly", () => {
     const result = processTransactions(mockData);
 
-    // Total = 90 + 25 = 115
     expect(result[1].total).toBe(115);
   });
 

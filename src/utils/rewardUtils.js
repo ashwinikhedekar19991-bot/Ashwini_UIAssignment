@@ -13,7 +13,7 @@ import { REWARD_CONFIG } from "./constants";
 import { logError } from "./logger";
 export const calculateRewardPoints = (amount) => {
   try {
-    if(!amount || amount < 0) return 0;
+    if (!amount || amount < 0) return 0;
     const rountedAmount = Math.floor(amount);//handle decimals
     let points = 0;
 
@@ -22,7 +22,7 @@ export const calculateRewardPoints = (amount) => {
       case rountedAmount > REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT:
         // Points above 100
         points += (rountedAmount - REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT
-) * 2;
+        ) * 2;
 
         // Points between 50-100
         points += (REWARD_CONFIG.BONUS_THRESHOLD_AMOUNT - REWARD_CONFIG.MIN_AMOUNT_FOR_REWARD);
@@ -51,9 +51,11 @@ export const calculateRewardPoints = (amount) => {
 export const processTransactions = (transactions) => {
   try {
     return transactions.reduce((accumulator, txn) => {
-      const month = new Date(txn.date)
-        .toLocaleString("default", { month: "short" });
+      const date = new Date(txn.date);
 
+      const month = `${date.toLocaleString("default", {
+        month: "short"
+      })}-${date.getFullYear()}`;
       const points = calculateRewardPoints(txn.amount);
 
       if (!accumulator[txn.customerId]) {
