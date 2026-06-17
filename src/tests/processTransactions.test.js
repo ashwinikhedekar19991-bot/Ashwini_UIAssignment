@@ -8,7 +8,7 @@ describe("processTransactions", () => {
   const mockData = [
     { customerId: 1, name: "John", amount: 120, date: "2026-01-15" },
     { customerId: 1, name: "John", amount: 75, date: "2026-02-10" }
-  ];
+  ]; 
 
   test("should group transactions by customer", () => {
     const result = processTransactions(mockData);
