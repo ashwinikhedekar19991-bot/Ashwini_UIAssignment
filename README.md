@@ -1,5 +1,5 @@
 
-# Reward Dashboard
+# Reward Dashboard 
 
 A React application that calculates and displays customer reward points based on transaction history.
 
