@@ -58,6 +58,8 @@ npm install
 npm start
 
 ## Run API
+
+## Completed
 npm run server
 
 ## Run Tests
