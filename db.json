@@ -1,6 +1,6 @@
 {
   "transactions": [
-    {
+    { 
       "id": 1,
       "customerId": 1,
       "name": "John",
